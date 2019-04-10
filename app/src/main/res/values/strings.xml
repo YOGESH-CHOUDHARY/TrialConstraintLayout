@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ConstraintTrial</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="upload_your_photo_or_a_selfie">Upload your photo or a selfie</string>
+    <string name="upload_the_images_of_identity_proof_s">Upload images of identity proof(s)</string>
+    <string name="termsandconditions">*By entering mobile number,you accept the <font fgcolor="@color/officialblue">Terms &amp; Conditions</font></string>
+</resources>

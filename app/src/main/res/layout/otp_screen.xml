@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/vmn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify mobile number"
+        android:textColor="@color/officialblue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/officialblue"
+        android:layout_marginStart="160dp"
+        app:layout_constraintStart_toEndOf="@+id/vmn"
+        app:layout_constraintTop_toBottomOf="@+id/vmn"/>
+
+    <ImageView
+        android:id="@+id/img_mobo_zebi"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/vmn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/mobile_verification_logo"/>
+
+    <TextView
+        android:id="@+id/mn_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_mobo_zebi"
+        android:textSize="30dp"
+        android:textColor="@color/officialblue"
+        android:text="+00 000 000 0000"
+        android:layout_marginTop="40dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/img_edit"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:background="@drawable/icon_edit_l"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/img_mobo_zebi"
+        app:layout_constraintRight_toRightOf="@+id/mn_value"
+        android:layout_marginRight="50dp"/>
+
+    <TextView
+        android:id="@+id/otp_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="An OTP is sent to the above number"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/mn_value"/>
+
+    <EditText
+        android:id="@+id/otp_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:hint="Enter the OTP"
+        app:layout_constraintTop_toBottomOf="@+id/otp_tv"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="40dp"
+        android:inputType="number"
+        android:padding="10dp"
+        android:maxLength="10"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/verify_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/otp_value"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:text="Verify"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/purewhite"/>
+
+    <TextView
+        android:id="@+id/tv_votp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/verify_otp"
+        android:text="Resend OTP after mm:ss"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:textColor="@color/officialblue"
+        android:layout_marginTop="20dp"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/darkblue"
+        app:layout_constraintBottom_toTopOf="@+id/view2"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/officialblue"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/img_home_background"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/image_home_background"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/zi_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Zebi-Id "
+        android:textSize="32dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/purewhite"/>
+
+    <TextView
+        android:id="@+id/zi_identity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/zi_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Your Digital Identity"
+        android:layout_marginEnd="40dp"
+        android:textColor="@color/purewhite"
+        android:textSize="24dp"/>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
