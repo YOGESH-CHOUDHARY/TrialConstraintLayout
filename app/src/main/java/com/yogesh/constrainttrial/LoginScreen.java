@@ -12,7 +12,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_screen);
+        setContentView(R.layout.login_screen_new);
 
         generateotp=findViewById(R.id.btn_generate_otp);
 
