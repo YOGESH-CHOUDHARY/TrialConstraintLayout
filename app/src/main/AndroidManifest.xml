@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".NeverEndingPractice"></activity>
         <activity android:name=".LoginScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,35 +19,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewLayout"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".FragmentMainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name=".NotificationView"
+        <activity
+            android:name=".NewLayout"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FragmentMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NotificationView"
             android:label="Details of notification"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".MainActivity" />
         </activity>
-
-        <activity android:name=".ListActivity"
+        <activity
+            android:name=".ListActivity"
             android:label="List Activity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity android:name=".OtpScreen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NewActivity"
+            android:label="New Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OtpScreen"
             android:label="Otp Screen"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity android:name=".UploadIdScreen"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".UploadIdScreen"
             android:label="UploadIdScreen"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Register"
+            android:label="Register"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
