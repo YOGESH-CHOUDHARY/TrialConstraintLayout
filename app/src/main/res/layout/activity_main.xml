@@ -1,101 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_6" />
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guideline1"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        android:text="SUBMIT"/>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/submit"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline_6"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        android:text="CANCEL"/>
+
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/icon_preferences"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_4"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_5"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_6"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_7"/>
+
+
     <TextView
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/tv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hvhjvhjvhjvj"
-        app:layout_constraintTop_toBottomOf="@+id/tv"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"/>
-
-    <EditText
-        android:id="@+id/et1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="jbjvjhvjhvjhvhvv"
-        app:layout_constraintBottom_toTopOf="@+id/tv"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"/>
-
-    <Button
-        android:id="@+id/btn_submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SUBMIT"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"
-        app:layout_constraintTop_toBottomOf="@+id/tv1"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"/>
-
-
-    <ImageView
-        android:id="@+id/img1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:src="@drawable/icon_preferences"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_submit" />
-
-
-    <WebView
-        android:id="@+id/webview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_4"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_5"
         app:layout_constraintTop_toBottomOf="@+id/img1"/>
 
-
-
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.2"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="60p" />
-
-    <TextView
-        android:id="@+id/label_abcde"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toLeftOf="@+id/guideline1"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline1"
-        app:layout_constraintTop_toTopOf="parent"
-        android:padding="16dp"
-        android:text="ABCDE" />
-
-    <TextView
-        android:id="@+id/label_f"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/label_abcde"
-        app:layout_constraintRight_toRightOf="@+id/label_abcde"
-        app:layout_constraintLeft_toRightOf="@+id/label_abcde"
-        android:padding="16dp"
-        android:text="F" />
 
 
 
